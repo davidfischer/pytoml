@@ -62,7 +62,7 @@ class TOMLParser(object):
 
     _parse_integer = lambda self, tok: int(tok[0])
     _parse_float = lambda self, tok: float(tok[0])
-    _parse_boolean = lambda self, tok: bool(tok[0])
+    _parse_boolean = lambda self, tok: True if tok[0] == 'true' else False
 
     ISO8601 = "%Y-%m-%dT%H:%M:%SZ"
 
